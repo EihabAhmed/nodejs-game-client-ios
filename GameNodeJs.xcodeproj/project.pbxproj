@@ -9,21 +9,28 @@
 /* Begin PBXBuildFile section */
 		6461475B2B9C7D8F005190CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6461475A2B9C7D8F005190CF /* AppDelegate.swift */; };
 		6461475D2B9C7D8F005190CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6461475C2B9C7D8F005190CF /* SceneDelegate.swift */; };
-		6461475F2B9C7D8F005190CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6461475E2B9C7D8F005190CF /* ViewController.swift */; };
+		6461475F2B9C7D8F005190CF /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6461475E2B9C7D8F005190CF /* GameViewController.swift */; };
 		646147622B9C7D8F005190CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 646147602B9C7D8F005190CF /* Main.storyboard */; };
 		646147642B9C7D93005190CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 646147632B9C7D93005190CF /* Assets.xcassets */; };
 		646147672B9C7D93005190CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 646147652B9C7D93005190CF /* LaunchScreen.storyboard */; };
+		646147722B9C84FB005190CF /* SocketHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646147712B9C84FB005190CF /* SocketHandler.swift */; };
+		646147742B9C8A86005190CF /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646147732B9C8A86005190CF /* Score.swift */; };
+		646147762B9CAB76005190CF /* UserNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 646147752B9CAB76005190CF /* UserNameViewController.swift */; };
+		646147792B9CE5CB005190CF /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = 646147782B9CE5CB005190CF /* SocketIO */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		646147572B9C7D8F005190CF /* GameNodeJs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameNodeJs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6461475A2B9C7D8F005190CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6461475C2B9C7D8F005190CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6461475E2B9C7D8F005190CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6461475E2B9C7D8F005190CF /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		646147612B9C7D8F005190CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		646147632B9C7D93005190CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		646147662B9C7D93005190CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		646147682B9C7D93005190CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		646147712B9C84FB005190CF /* SocketHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketHandler.swift; sourceTree = "<group>"; };
+		646147732B9C8A86005190CF /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		646147752B9CAB76005190CF /* UserNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				646147792B9CE5CB005190CF /* SocketIO in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +50,7 @@
 			children = (
 				646147592B9C7D8F005190CF /* GameNodeJs */,
 				646147582B9C7D8F005190CF /* Products */,
+				646147772B9CE5CB005190CF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +67,23 @@
 			children = (
 				6461475A2B9C7D8F005190CF /* AppDelegate.swift */,
 				6461475C2B9C7D8F005190CF /* SceneDelegate.swift */,
-				6461475E2B9C7D8F005190CF /* ViewController.swift */,
+				6461475E2B9C7D8F005190CF /* GameViewController.swift */,
+				646147752B9CAB76005190CF /* UserNameViewController.swift */,
+				646147712B9C84FB005190CF /* SocketHandler.swift */,
+				646147732B9C8A86005190CF /* Score.swift */,
 				646147602B9C7D8F005190CF /* Main.storyboard */,
 				646147632B9C7D93005190CF /* Assets.xcassets */,
 				646147652B9C7D93005190CF /* LaunchScreen.storyboard */,
 				646147682B9C7D93005190CF /* Info.plist */,
 			);
 			path = GameNodeJs;
+			sourceTree = "<group>";
+		};
+		646147772B9CE5CB005190CF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +102,9 @@
 			dependencies = (
 			);
 			name = GameNodeJs;
+			packageProductDependencies = (
+				646147782B9CE5CB005190CF /* SocketIO */,
+			);
 			productName = GameNodeJs;
 			productReference = 646147572B9C7D8F005190CF /* GameNodeJs.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +133,9 @@
 				Base,
 			);
 			mainGroup = 6461474E2B9C7D8F005190CF;
+			packageReferences = (
+				6461476E2B9C84B1005190CF /* XCRemoteSwiftPackageReference "socket.io-client-swift" */,
+			);
 			productRefGroup = 646147582B9C7D8F005190CF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,9 +163,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6461475F2B9C7D8F005190CF /* ViewController.swift in Sources */,
+				6461475F2B9C7D8F005190CF /* GameViewController.swift in Sources */,
+				646147722B9C84FB005190CF /* SocketHandler.swift in Sources */,
 				6461475B2B9C7D8F005190CF /* AppDelegate.swift in Sources */,
 				6461475D2B9C7D8F005190CF /* SceneDelegate.swift in Sources */,
+				646147762B9CAB76005190CF /* UserNameViewController.swift in Sources */,
+				646147742B9C8A86005190CF /* Score.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,8 +320,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -319,8 +346,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -356,6 +382,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6461476E2B9C84B1005190CF /* XCRemoteSwiftPackageReference "socket.io-client-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/socketio/socket.io-client-swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 16.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		646147782B9CE5CB005190CF /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6461476E2B9C84B1005190CF /* XCRemoteSwiftPackageReference "socket.io-client-swift" */;
+			productName = SocketIO;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6461474F2B9C7D8F005190CF /* Project object */;
 }
