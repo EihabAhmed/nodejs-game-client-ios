@@ -45,6 +45,24 @@ class GameViewController: UIViewController {
                 print("Error decoding object")
             }
         }
+        
+        mSocket.on("broadcast2") { [self] (dataArray, ack) -> Void in
+            let dataReceived = dataArray[0] as! String
+            
+            let decoder = JSONDecoder()
+            do {
+                let other = try decoder.decode(Score.self, from: dataReceived.data(using: .utf8)!)
+                
+                if (other.username == username) {
+                    selfScoreLabel.text = "\(other.score)"
+                } else {
+                    otherNameLabel.text = other.username
+                    otherScoreLabel.text = "\(other.score)"
+                }
+            } catch {
+                print("Error decoding object")
+            }
+        }
     }
 
     @IBAction func didTabScoreButton(_ sender: Any) {
@@ -63,6 +81,23 @@ class GameViewController: UIViewController {
 
             // send score to server
             mSocket.emit("new_message", json)
+        } catch {
+            print("Error encoding object")
+        }
+    }
+    
+    @IBAction func didTabScore2Button(_ sender: Any) {
+        myScore += 3
+        let score = Score(username: username!, score: myScore)
+        
+        let encoder = JSONEncoder()
+        do {
+            // convert score object to json
+            let data = try encoder.encode(score)
+            let json = String(decoding: data, as: UTF8.self)
+
+            // send score to server
+            mSocket.emit("new_message2", json)
         } catch {
             print("Error encoding object")
         }

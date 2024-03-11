@@ -92,6 +92,14 @@
                                     <action selector="didTabScoreButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="V56-Co-4Bw"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rNW-Wu-XN8">
+                                <rect key="frame" x="159" y="408" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="didTabScore2Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A8F-Fg-RhG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -106,6 +114,8 @@
                             <constraint firstItem="4jk-Mi-Qxj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="btE-56-UYV"/>
                             <constraint firstItem="nje-no-MB7" firstAttribute="centerX" secondItem="Qty-Hz-y0G" secondAttribute="centerX" id="buO-58-E7b"/>
                             <constraint firstItem="4jk-Mi-Qxj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.66" id="qPI-5Z-Ejs"/>
+                            <constraint firstItem="rNW-Wu-XN8" firstAttribute="top" secondItem="BZT-9i-7sL" secondAttribute="bottom" constant="20" id="rQH-Z2-qQI"/>
+                            <constraint firstItem="rNW-Wu-XN8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w7g-3E-ukQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ah7-vv-iXc"/>
