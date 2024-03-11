@@ -41,6 +41,12 @@ class GameViewController: UIViewController {
                     otherNameLabel.text = other.username
                     otherScoreLabel.text = "\(other.score)"
                 }
+                
+                selfNameLabel.textColor = .black
+                selfScoreLabel.textColor = .black
+                otherNameLabel.textColor = .black
+                otherScoreLabel.textColor = .black
+                
             } catch {
                 print("Error decoding object")
             }
@@ -59,6 +65,12 @@ class GameViewController: UIViewController {
                     otherNameLabel.text = other.username
                     otherScoreLabel.text = "\(other.score)"
                 }
+                
+                selfNameLabel.textColor = .blue
+                selfScoreLabel.textColor = .blue
+                otherNameLabel.textColor = .blue
+                otherScoreLabel.textColor = .blue
+                
             } catch {
                 print("Error decoding object")
             }
