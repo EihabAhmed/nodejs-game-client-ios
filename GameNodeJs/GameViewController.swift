@@ -92,7 +92,9 @@ class GameViewController: UIViewController {
             let json = String(decoding: data, as: UTF8.self)
 
             // send score to server
-            mSocket.emit("new_message", json)
+            for _ in 0 ..< 3 {
+                mSocket.emit("new_message", json)
+            }
         } catch {
             print("Error encoding object")
         }
@@ -109,7 +111,9 @@ class GameViewController: UIViewController {
             let json = String(decoding: data, as: UTF8.self)
 
             // send score to server
-            mSocket.emit("new_message2", json)
+            for _ in 0 ..< 3 {
+                mSocket.emit("new_message2", json)
+            }
         } catch {
             print("Error encoding object")
         }
