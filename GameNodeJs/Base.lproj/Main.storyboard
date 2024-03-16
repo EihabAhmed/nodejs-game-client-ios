@@ -100,6 +100,12 @@
                                     <action selector="didTabScore2Button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="A8F-Fg-RhG"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="npF-4e-Gj7" userLabel="Led Status Label">
+                                <rect key="frame" x="196.66666666666666" y="493" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -113,13 +119,16 @@
                             <constraint firstItem="xdy-pT-dRa" firstAttribute="centerX" secondItem="4jk-Mi-Qxj" secondAttribute="centerX" id="bC2-LI-7nk"/>
                             <constraint firstItem="4jk-Mi-Qxj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="btE-56-UYV"/>
                             <constraint firstItem="nje-no-MB7" firstAttribute="centerX" secondItem="Qty-Hz-y0G" secondAttribute="centerX" id="buO-58-E7b"/>
+                            <constraint firstItem="npF-4e-Gj7" firstAttribute="top" secondItem="rNW-Wu-XN8" secondAttribute="bottom" constant="50" id="bxb-NL-SUY"/>
                             <constraint firstItem="4jk-Mi-Qxj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" multiplier="0.66" id="qPI-5Z-Ejs"/>
                             <constraint firstItem="rNW-Wu-XN8" firstAttribute="top" secondItem="BZT-9i-7sL" secondAttribute="bottom" constant="20" id="rQH-Z2-qQI"/>
                             <constraint firstItem="rNW-Wu-XN8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="w7g-3E-ukQ"/>
+                            <constraint firstItem="npF-4e-Gj7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zLl-EM-W2O"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ah7-vv-iXc"/>
                     <connections>
+                        <outlet property="ledStatusLabel" destination="npF-4e-Gj7" id="oba-YY-573"/>
                         <outlet property="otherNameLabel" destination="Qty-Hz-y0G" id="kfL-M1-zO2"/>
                         <outlet property="otherScoreLabel" destination="nje-no-MB7" id="Dcr-kN-StL"/>
                         <outlet property="selfNameLabel" destination="4jk-Mi-Qxj" id="wOc-RV-EEH"/>

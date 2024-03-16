@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		643CEA922BA514FC005564CA /* LedStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 643CEA912BA514FC005564CA /* LedStatus.swift */; };
 		6461475B2B9C7D8F005190CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6461475A2B9C7D8F005190CF /* AppDelegate.swift */; };
 		6461475D2B9C7D8F005190CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6461475C2B9C7D8F005190CF /* SceneDelegate.swift */; };
 		6461475F2B9C7D8F005190CF /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6461475E2B9C7D8F005190CF /* GameViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		643CEA912BA514FC005564CA /* LedStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LedStatus.swift; sourceTree = "<group>"; };
 		646147572B9C7D8F005190CF /* GameNodeJs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameNodeJs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6461475A2B9C7D8F005190CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6461475C2B9C7D8F005190CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +73,7 @@
 				646147752B9CAB76005190CF /* UserNameViewController.swift */,
 				646147712B9C84FB005190CF /* SocketHandler.swift */,
 				646147732B9C8A86005190CF /* Score.swift */,
+				643CEA912BA514FC005564CA /* LedStatus.swift */,
 				646147602B9C7D8F005190CF /* Main.storyboard */,
 				646147632B9C7D93005190CF /* Assets.xcassets */,
 				646147652B9C7D93005190CF /* LaunchScreen.storyboard */,
@@ -169,6 +172,7 @@
 				6461475D2B9C7D8F005190CF /* SceneDelegate.swift in Sources */,
 				646147762B9CAB76005190CF /* UserNameViewController.swift in Sources */,
 				646147742B9C8A86005190CF /* Score.swift in Sources */,
+				643CEA922BA514FC005564CA /* LedStatus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

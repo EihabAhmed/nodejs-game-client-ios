@@ -15,6 +15,7 @@ class GameViewController: UIViewController {
     @IBOutlet weak var otherNameLabel: UILabel!
     @IBOutlet weak var selfScoreLabel: UILabel!
     @IBOutlet weak var otherScoreLabel: UILabel!
+    @IBOutlet weak var ledStatusLabel: UILabel!
     
     var username: String?
     var myScore = 0
@@ -75,6 +76,24 @@ class GameViewController: UIViewController {
                 print("Error decoding object")
             }
         }
+        
+        mSocket.on("led_status") { [self] (dataArray, ack) -> Void in
+            let dataReceived = dataArray[0] as! String
+            
+            let decoder = JSONDecoder()
+            do {
+                let ledStatus = try decoder.decode(LedStatus.self, from: dataReceived.data(using: .utf8)!)
+                
+                if (ledStatus.ledOff) {
+                    ledStatusLabel.text = "LED Off"
+                } else {
+                    ledStatusLabel.text = "LED On"
+                }
+                
+            } catch {
+                print("Error decoding object")
+            }
+        }
     }
 
     @IBAction func didTabScoreButton(_ sender: Any) {
@@ -92,9 +111,7 @@ class GameViewController: UIViewController {
             let json = String(decoding: data, as: UTF8.self)
 
             // send score to server
-            for _ in 0 ..< 3 {
-                mSocket.emit("new_message", json)
-            }
+            mSocket.emit("new_message", json)
         } catch {
             print("Error encoding object")
         }
@@ -111,9 +128,7 @@ class GameViewController: UIViewController {
             let json = String(decoding: data, as: UTF8.self)
 
             // send score to server
-            for _ in 0 ..< 3 {
-                mSocket.emit("new_message2", json)
-            }
+            mSocket.emit("new_message2", json)
         } catch {
             print("Error encoding object")
         }
